@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script>
+        function cambiarEstilo() {
+            document.getElementById("texto").style.fontWeight = document.getElementById("selectNegrita").value;
+            document.getElementById("texto").style.fontStyle = document.getElementById("selectCursiva").value;
+        }
+    </script>
+</head>
+<body>
+
+    <select id="selectNegrita" onchange="cambiarEstilo()">
+        <option value="normal">Sin Negrita</option>
+        <option value="bold">Con Negrita</option>
+    </select>
+
+    <select id="selectCursiva" onchange="cambiarEstilo()">
+        <option value="normal">Sin Cursiva</option>
+        <option value="italic">Con Cursiva</option>
+    </select>
+
+    <div id="texto">Texto de prueba para modificar estilo</div>
+
+</body>
+</html>
